@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ComercialInfo\ICompanyFlight.cs" />
+    <Compile Include="Rating\Classification.cs" />
+    <Compile Include="Rating\IFlightRating.cs" />
+    <Compile Include="Resume\IFlightResume.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
