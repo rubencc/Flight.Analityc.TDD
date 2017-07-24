@@ -2,24 +2,24 @@
 
 namespace Analityc.Domain.Implementation
 {
-    public class FlightResumeFactory
+    public static class FlightResumeFactory
     {
-        public FlightResumeBuilder Build(string code, string internationalCode, string companyCode)
+        public static FlightResumeAutoBuilder Build(string flightCode, string internationalCode, string companyCode)
         {
             ICompanyFlight companyFlight =
                 new CompanyFlight()
                 {
                     CompanyCode = companyCode,
-                    FlightCode = code,
+                    FlightCode = flightCode,
                     InternationalCode = internationalCode
                 };
 
-            return  new FlightResumeBuilder(new FlightResume(){Flight = companyFlight, Code = companyFlight.FlightCode});
+            return  new FlightResumeAutoBuilder(new FlightResume(){Flight = companyFlight, Code = companyFlight.FlightCode});
         }
 
-        public FlightResumeBuilder Build(ICompanyFlight companyFlight)
+        public static FlightResumeAutoBuilder Build(ICompanyFlight companyFlight)
         {
-            return new FlightResumeBuilder(new FlightResume() { Flight = companyFlight, Code = companyFlight.FlightCode });
+            return new FlightResumeAutoBuilder(new FlightResume() { Flight = companyFlight, Code = companyFlight.FlightCode });
         }
     }
 }

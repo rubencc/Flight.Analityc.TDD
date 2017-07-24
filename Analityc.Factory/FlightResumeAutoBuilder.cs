@@ -43,14 +43,16 @@ namespace Analityc.Domain.Implementation
                 };
             }
 
+            DateTime date = DateTime.UtcNow;
+
             if (this.Resume.DepartureTime == new DateTime())
             {
-                this.Resume.DepartureTime = DateTime.UtcNow.AddHours(-1);
+                this.Resume.DepartureTime = date.AddHours(-1);
             }
 
             if (this.Resume.ArrivalTime == new DateTime())
             {
-                this.Resume.ArrivalTime = DateTime.UtcNow.AddHours(1);
+                this.Resume.ArrivalTime = date.AddHours(1);
             }
 
             if (this.Resume.PlannedTime == 0)
