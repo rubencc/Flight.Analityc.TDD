@@ -13,5 +13,8 @@ namespace Analityc.Domain.Implementation
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
         public int PlannedTime { get; set; }
+        public bool OnAlarm { get; set; }
+        public bool MedicalEmergency { get; set; }
+        public bool FireInTheLandingTrack { get; set; }
     }
 }

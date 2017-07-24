@@ -12,5 +12,8 @@ namespace Analityc.Domain.Interfaces
         DateTime DepartureTime { get; set; }
         DateTime ArrivalTime { get; set; }
         int PlannedTime { get; set; }
+        bool OnAlarm { get; set; }
+        bool MedicalEmergency { get; set; }
+        bool FireInTheLandingTrack { get; set; }
     }
 }
