@@ -2,7 +2,7 @@
 {
     public enum Classification
     {
-        AA = 10,
+        APlus = 10,
         A = 9,
         B = 8,
         C = 7,

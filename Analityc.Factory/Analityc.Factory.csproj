@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1CF09AB-68A6-4B18-B427-2DBE121BD76A}</ProjectGuid>
+    <ProjectGuid>{80C76864-51A7-4B6F-9F97-D62583D87F59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Analityc.Domain.Implementation</RootNamespace>
-    <AssemblyName>Analityc.Domain.Implementation</AssemblyName>
+    <RootNamespace>Analityc.Factory</RootNamespace>
+    <AssemblyName>Analityc.Factory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,18 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analitycs\FlightAnalityc.cs" />
-    <Compile Include="ComercialInfo\CompanyFlight.cs" />
-    <Compile Include="LocationInfo\Location.cs" />
+    <Compile Include="FlightResumeAutoBuilder.cs" />
+    <Compile Include="FlightResumeBuilder.cs" />
+    <Compile Include="FlightResumeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resume\FlightResume.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Analityc.Domain.Implementation\Analityc.Domain.Implementation.csproj">
+      <Project>{c1cf09ab-68a6-4b18-b427-2dbe121bd76a}</Project>
+      <Name>Analityc.Domain.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Analityc.Domain.Interfaces\Analityc.Domain.Interfaces.csproj">
       <Project>{e5cd6028-bc66-4936-b3bb-7a4b03917a93}</Project>
       <Name>Analityc.Domain.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
