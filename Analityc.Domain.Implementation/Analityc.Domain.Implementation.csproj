@@ -41,10 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analitycs\FlightAnalityc.cs" />
+    <Compile Include="Analizer\ProcessingResult.cs" />
+    <Compile Include="Analizer\Strategies\NotDestinationLandedStrategy.cs" />
+    <Compile Include="Analizer\Strategies\SameContinentStrategy.cs" />
     <Compile Include="ComercialInfo\CompanyFlight.cs" />
     <Compile Include="LocationInfo\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resume\FlightResume.cs" />
+    <Compile Include="Analizer\FlightValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analityc.Domain.Interfaces\Analityc.Domain.Interfaces.csproj">

@@ -1,4 +1,4 @@
-﻿namespace Analityc.Domain.Interfaces.Analitycs
+﻿namespace Analityc.Domain.Interfaces
 {
     public interface IFlightAnalityc
     {

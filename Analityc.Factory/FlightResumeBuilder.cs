@@ -54,6 +54,15 @@ namespace Analityc.Domain.Implementation
             return this;
         }
 
+        public FlightResumeBuilder WithSameDestinationAndLanded(string airportCode, Country country)
+        {
+            var location = new Location() { AirportCode = airportCode, Country = country };
+            this.Resume.Destination = location;
+            this.Resume.Landed = location;
+
+            return this;
+        }
+
         public FlightResumeBuilder WithDepartureTime(DateTime time)
         {
             this.Resume.DepartureTime = time;

@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analitycs\IFlightAnalityc.cs" />
+    <Compile Include="Analizer\IAnalizer.cs" />
+    <Compile Include="Analizer\IAnalizerStrategy.cs" />
+    <Compile Include="Analizer\IProcessingResult.cs" />
     <Compile Include="LocationInfo\Country.cs" />
     <Compile Include="LocationInfo\ILocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
